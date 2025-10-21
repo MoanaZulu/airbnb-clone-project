@@ -36,3 +36,17 @@ overview of frontend and backend integration
 -Redis: In-memory data store used for caching. Speeds up repeated queries (like popular listings) and supports Celery task queues.
 -Docker: Containerizes your app to ensure consistent environments across development, testing, and deployment. Makes your project portable and scalable.
 -CI/CD pipelines: Automates testing and deployment. Ensures that every code change is validated and deployed smoothly—boosting reliability and team productivity.
+
+## Database Design
+-User Management: User id, email, password.
+A user can leave reviews for properties they’ve booked.
+-Property management: Price per night, location, owner id.
+Properties can receive multiple reviews.
+-Booking system: booking id, user id, property id.
+Booking history informs user behavior analytics and availability logic.
+-Payment Processing: payment id, booking id, payment method.
+Payments are tied to bookings.
+-Review system: review id, user id, property id.
+Reviews are submitted by users for properties they’ve booked.
+-Data optimization: query logs, cache keys, search rankings.
+Insights help personalize user experience and marketing strategies.
