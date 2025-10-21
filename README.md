@@ -14,9 +14,25 @@ overview of frontend and backend integration
 - Deployment: Docker, CI/CD pipeline
 
 ## 👥 Team Roles
-
 -Backend Developer
 -DB Admin
 -DevOps Engineer
 -QA Engineer
 
+## Technology Stack
+-Backend: Django, Django Rest Framework
+-Database: Postgre SQL
+-Querying: Graph QL
+-Async Tasks: Celery
+-Caching: Redis
+-Deployment: Docker, CI/CD pipelines
+
+## Purpose & Role
+-Django: High-level Python web framework that handles backend logic, routing, and MVC architecture. Ideal for rapid development and clean design.
+-Django Rest Framework: Extends Django to build RESTful APIs. It simplifies serialization, authentication, and API views—perfect for mobile or frontend integration.
+-PostgreSQL: Robust relational database system. Stores structured data like user profiles, property listings, and bookings. Supports complex queries and transactions.
+-GraphQL:	Query language for APIs. Allows clients to request exactly the data they need—great for optimizing frontend performance and reducing over-fetching.
+-Celery: Handles asynchronous tasks like sending emails, processing bookings, or generating reports. Keeps your app responsive by offloading time-consuming jobs.
+-Redis: In-memory data store used for caching. Speeds up repeated queries (like popular listings) and supports Celery task queues.
+-Docker: Containerizes your app to ensure consistent environments across development, testing, and deployment. Makes your project portable and scalable.
+-CI/CD pipelines: Automates testing and deployment. Ensures that every code change is validated and deployed smoothly—boosting reliability and team productivity.
