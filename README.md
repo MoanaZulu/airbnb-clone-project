@@ -51,7 +51,7 @@ Reviews are submitted by users for properties they’ve booked.
 -Data optimization: query logs, cache keys, search rankings.
 Insights help personalize user experience and marketing strategies.
 
-## feature breakdown
+## main feature breakdown 
 -API documentation: It boosts collaboration, simplifies integration with frontend or mobile apps, and makes your project scalable for future enhancements.
 -user Authentication: It secures user data, sensitive actins like bookings, payments, and reviews.
 -Property management: It forms the backbone of the platform’s inventory and directly impacts search results and booking logic.
