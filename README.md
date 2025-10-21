@@ -51,7 +51,7 @@ Reviews are submitted by users for properties they’ve booked.
 -Data optimization: query logs, cache keys, search rankings.
 Insights help personalize user experience and marketing strategies.
 
-## main feature breakdown 
+## Feature breakdown 
 -API documentation
 -user Authentication
 -Property management
