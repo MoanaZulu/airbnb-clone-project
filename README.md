@@ -46,22 +46,17 @@ overview of frontend and backend integration
 -Data optimization: query logs, cache keys, search rankings. Caching, query logs, and search rankings for performance
 
 
-## Feature breakdown 
--API documentation
--user Authentication
--Property management
--Booking system
--Payment Processing
--Review system 
--Database optimization
+## Feature breakdown
 
-API documentation: It boosts collaboration, simplifies integration with frontend or mobile apps, and makes your project scalable for future enhancements.
-user Authentication: It secures user data, sensitive actins like bookings, payments, and reviews.
-Property management: It forms the backbone of the platform’s inventory and directly impacts search results and booking logic.
-Booking system: Handles reservation workflows by linking users to properties with date and availability logic.
-Review system: Enables users to leave feedback on properties they’ve stayed in, fostering transparency and credibility.
-Payment Processing: Securely manages transactions tied to bookings, including payment methods and receipts.
-Database optimization: Improves performance by caching frequent queries, indexing key fields, and analyzing usage patterns.
+| Feature                | Responsibilities                                                   | Acceptance Criteria                                                                                      |     Status         |
+|----------------------- |-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|--------------------|
+| **API Documentation**     | Define and expose backend endpoints for frontend and external use| Swagger/Postman docs available; endpoints tested and versioned                                | ✅ Completed       |
+| **User Authentication**   | Secure login, registration, and session management              | Users can register, log in, and access protected routes with token-based auth                            | ✅ Completed       |
+| **Property Management**   | Allow hosts to create, update, and delete property listings      | CRUD operations functional; listings tied to users; validations in place                             | ✅ Completed       |
+| **Booking System**        | Enable users to reserve properties with date and availability logic| Users can book available properties; double-booking prevented; booking history saved              | ✅ Completed       |
+| **Payment Processing**    | Handle secure transactions for bookings                          | Payments processed via gateway; linked to bookings; receipts generated                          | 🔄 In Progress     |
+| **Review System**         | Allow users to leave feedback on booked properties              | Reviews tied to bookings; only verified users can post; moderation enabled                              | ✅ Completed       |
+| **Database Optimization** | Improve performance through indexing, caching, and query tuning  | Indexed fields; Redis caching active; slow queries logged and optimized                                | 🔄 In Progress     |
 
 ## API security
 APIs act as the gateway between frontend and backend, and must be protected to prevent unauthorized access. This project uses..
