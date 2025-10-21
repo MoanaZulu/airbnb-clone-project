@@ -12,3 +12,11 @@ overview of frontend and backend integration
 - Async Tasks: Celery
 - Caching: Redis
 - Deployment: Docker, CI/CD pipeline
+
+## 👥 Team Roles
+
+-Backend Developer
+-DB Admin
+-DevOps Engineer
+-QA Engineer
+
