@@ -52,13 +52,21 @@ Reviews are submitted by users for properties they’ve booked.
 Insights help personalize user experience and marketing strategies.
 
 ## main feature breakdown 
--API documentation: It boosts collaboration, simplifies integration with frontend or mobile apps, and makes your project scalable for future enhancements.
--user Authentication: It secures user data, sensitive actins like bookings, payments, and reviews.
--Property management: It forms the backbone of the platform’s inventory and directly impacts search results and booking logic.
--Booking system: Handles reservation workflows by linking users to properties with date and availability logic.
--Payment Processing: Securely manages transactions tied to bookings, including payment methods and receipts.
--Review system: Enables users to leave feedback on properties they’ve stayed in, fostering transparency and credibility.  
--Database optimization: Improves performance by caching frequent queries, indexing key fields, and analyzing usage patterns.
+-API documentation
+-user Authentication
+-Property management
+-Booking system
+-Payment Processing
+-Review system 
+-Database optimization
+
+API documentation: It boosts collaboration, simplifies integration with frontend or mobile apps, and makes your project scalable for future enhancements.
+user Authentication: It secures user data, sensitive actins like bookings, payments, and reviews.
+Property management: It forms the backbone of the platform’s inventory and directly impacts search results and booking logic.
+Booking system: Handles reservation workflows by linking users to properties with date and availability logic.
+Review system: Enables users to leave feedback on properties they’ve stayed in, fostering transparency and credibility.
+Payment Processing: Securely manages transactions tied to bookings, including payment methods and receipts.
+Database optimization: Improves performance by caching frequent queries, indexing key fields, and analyzing usage patterns.
 
 ## API security
 -Open API (SWAGGER)
