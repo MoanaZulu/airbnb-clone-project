@@ -11,13 +11,13 @@ overview of frontend and backend integration
 - Querying: Graph QL
 - Async Tasks: Celery
 - Caching: Redis
-- Deployment: Docker, CI/CD pipeline
+- Deployment: Docker, CI/CD pipelines
 
 ## 👥 Team Roles
--Backend Developer
--DB Admin
--DevOps Engineer
--QA Engineer
+-Backend Developer: API design, business logic, and integration
+-DB Admin: Schema design, optimization, and deployment
+-DevOps Engineer: CI/CD setup, containerization, and deployment
+-QA Engineer: Automated testing, bug tracking, and release validation
 
 ## Technology Stack
 -Backend: Django, Django Rest Framework
@@ -38,18 +38,13 @@ overview of frontend and backend integration
 -CI/CD pipelines: Automates testing and deployment. Ensures that every code change is validated and deployed smoothly—boosting reliability and team productivity.
 
 ## Database Design
--User Management: User id, email, password.
-A user can leave reviews for properties they’ve booked.
--Property management: Price per night, location, owner id.
-Properties can receive multiple reviews.
--Booking system: booking id, user id, property id.
-Booking history informs user behavior analytics and availability logic.
--Payment Processing: payment id, booking id, payment method.
-Payments are tied to bookings.
--Review system: review id, user id, property id.
-Reviews are submitted by users for properties they’ve booked.
--Data optimization: query logs, cache keys, search rankings.
-Insights help personalize user experience and marketing strategies.
+-User Management: User id, email, password. Users can register, authenticate and leave reviews.
+-Property management: Price per night, location, owner id. Hosts list properties with pricing, locaton, and availability.
+-Booking system: booking id, user id, property id. Users reserve properties with date and user linkage
+-Payment Processing: payment id, booking id, payment method. Secure transactions tied to bookings
+-Review system: review id, user id, property id. Feedback submitted by verfied users
+-Data optimization: query logs, cache keys, search rankings. Caching, query logs, and search rankings for performance
+
 
 ## Feature breakdown 
 -API documentation
@@ -69,25 +64,31 @@ Payment Processing: Securely manages transactions tied to bookings, including pa
 Database optimization: Improves performance by caching frequent queries, indexing key fields, and analyzing usage patterns.
 
 ## API security
--Open API (SWAGGER)
--GraphQL SDL
--R A M L
--API blueprint
--Postman collections
-API are a form of gateway between frontend and backend, security is a need because without it, attackers could expoit endpoints to access user data. API makes it harder for attackers to access this data and only authoried requests are processed.
+APIs act as the gateway between frontend and backend, and must be protected to prevent unauthorized access. This project uses..
+-OpenAPI (Swagger): Interactive documentation and schema validation
+-GraphQL SDL: Schema definition for secure query control
+-RAML / API Blueprint: Optional formats for structured API design
+-Postman Collections: For testing and sharing API workflows
 
-CI/CD pipeline
-CI is the practice of automatically testing and integrating code changes into a shared repository.
-CD takes it a step further by automatically deploying those tested changes to a staging or production environment.
-They matter because of 
--speed and efficiency
--consistency
--confidence
-Pipelines are crucial because they automate and streamline the entire development lifecycle—from writing code to testing, deploying, and monitoring it.
--Github Actions
--Jekins
--Github CI/CD
+##Security measures include:
+-Token-based authentication
+-Rate limiting and input validation
+-Role-based access control
+-HTTPS enforcement and CORS policies
+
+## CI/CD pipelines
+CI (Continuous Integration) is the practice of automatically testing and integrating code changes into a shared repository.
+CD (Continuous Delivery/Deployment) takes it a step further by automatically deploying those tested changes to a staging or production environment.
+
+## Benefits
+-Speed and efficiency
+-Consistency across environments
+-Confidence in every release
+
+## Tools used
+-GitHub Actions
+-Jenkins
 -CircleCI
-Travis CI
--Docker+ Docker compose
--Heroku pipelines
+-Travis CI
+-Docker + Docker Compose
+-Heroku Pipelines
