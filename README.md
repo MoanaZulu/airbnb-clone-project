@@ -59,3 +59,11 @@ Insights help personalize user experience and marketing strategies.
 -Payment Processing: Securely manages transactions tied to bookings, including payment methods and receipts.
 -Review system: Enables users to leave feedback on properties they’ve stayed in, fostering transparency and credibility.  
 -Database optimization: Improves performance by caching frequent queries, indexing key fields, and analyzing usage patterns.
+
+## API security
+-Open API (SWAGGER)
+-GraphQL SDL
+-R A M L
+-API blueprint
+-Postman collections
+API are a form of gateway between frontend and backend, security is a need because without it, attackers could expoit endpoints to access user data. API makes it harder for attackers to access this data and only authoried requests are processed.
