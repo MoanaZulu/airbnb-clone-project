@@ -67,3 +67,19 @@ Insights help personalize user experience and marketing strategies.
 -API blueprint
 -Postman collections
 API are a form of gateway between frontend and backend, security is a need because without it, attackers could expoit endpoints to access user data. API makes it harder for attackers to access this data and only authoried requests are processed.
+
+CI/CD pipeline
+CI is the practice of automatically testing and integrating code changes into a shared repository.
+CD takes it a step further by automatically deploying those tested changes to a staging or production environment.
+They matter because of 
+-speed and efficiency
+-consistency
+-confidence
+Pipelines are crucial because they automate and streamline the entire development lifecycle—from writing code to testing, deploying, and monitoring it.
+-Github Actions
+-Jekins
+-Github CI/CD
+-CircleCI
+Travis CI
+-Docker+ Docker compose
+-Heroku pipelines
