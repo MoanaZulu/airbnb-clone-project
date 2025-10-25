@@ -167,7 +167,7 @@ CREATE TABLE Payment (
     FOREIGN KEY (booking_id) REFERENCES Booking(id)
 );
 
-# 🧱 Database Schema
+# 🧱 Design Database Schema
 
 This folder contains the SQL schema for the Airbnb Clone project.
 
@@ -199,6 +199,77 @@ VALUES (1, 1, 5, 'Amazing stay!'),
 INSERT INTO Payment (booking_id, amount, status, method)
 VALUES (1, 4800.00, 'paid', 'card'),
        (2, 4750.00, 'paid', 'paypal');
+
+   -- Airbnb Clone Schema Definition
+
+CREATE TABLE User (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(255),
+    role ENUM('guest', 'host')
+);
+
+CREATE TABLE Property (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255),
+    location VARCHAR(255),
+    price_per_night DECIMAL(10,2),
+    host_id INT,
+    FOREIGN KEY (host_id) REFERENCES User(id)
+);
+
+CREATE TABLE Booking (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    property_id INT,
+    start_date DATE,
+    end_date DATE,
+    FOREIGN KEY (user_id) REFERENCES User(id),
+    FOREIGN KEY (property_id) REFERENCES Property(id)
+);
+
+CREATE TABLE Review (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    property_id INT,
+    rating INT,
+    comment TEXT,
+    FOREIGN KEY (user_id) REFERENCES User(id),
+    FOREIGN KEY (property_id) REFERENCES Property(id)
+);
+
+CREATE TABLE Payment (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    booking_id INT,
+    amount DECIMAL(10,2),
+    status ENUM('paid', 'pending'),
+    method VARCHAR(50),
+    FOREIGN KEY (booking_id) REFERENCES Booking(id)
+);
+
+--## Sample Data for Airbnb Clone
+
+INSERT INTO User (name, email, password, role)
+VALUES ('Alice', 'alice@example.com', 'hashed_pw', 'guest'),
+       ('Bob', 'bob@example.com', 'hashed_pw', 'host');
+
+INSERT INTO Property (title, location, price_per_night, host_id)
+VALUES ('Cozy Cottage', 'Cape Town', 1200.00, 2),
+       ('Urban Loft', 'Johannesburg', 950.00, 2);
+
+INSERT INTO Booking (user_id, property_id, start_date, end_date)
+VALUES (1, 1, '2025-11-01', '2025-11-05'),
+       (1, 2, '2025-12-10', '2025-12-15');
+
+INSERT INTO Review (user_id, property_id, rating, comment)
+VALUES (1, 1, 5, 'Amazing stay!'),
+       (1, 2, 4, 'Great location.');
+
+INSERT INTO Payment (booking_id, amount, status, method)
+VALUES (1, 4800.00, 'paid', 'card'),
+       (2, 4750.00, 'paid', 'paypal');
+
 
 # 💾 Database Seeding
 
