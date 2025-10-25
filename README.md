@@ -45,45 +45,56 @@ overview of frontend and backend integration
 -Review system: review id, user id, property id. Feedback submitted by verfied users
 -Data optimization: query logs, cache keys, search rankings. Caching, query logs, and search rankings for performance
 
+## ⚙️ Feature Breakdown
 
-## Feature breakdown
+- **User Management**  
+  Enables registration, login, and role assignment (guest or host). Crucial for access control and personalized experiences.
 
-| Feature                | Responsibilities                                                   | Acceptance Criteria                                                                                      |     Status         |
-|----------------------- |-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|--------------------|
-| **API Documentation**     | Define and expose backend endpoints for frontend and external use| Swagger/Postman docs available; endpoints tested and versioned                                | ✅ Completed       |
-| **User Authentication**   | Secure login, registration, and session management              | Users can register, log in, and access protected routes with token-based auth                            | ✅ Completed       |
-| **Property Management**   | Allow hosts to create, update, and delete property listings      | CRUD operations functional; listings tied to users; validations in place                             | ✅ Completed       |
-| **Booking System**        | Enable users to reserve properties with date and availability logic| Users can book available properties; double-booking prevented; booking history saved              | ✅ Completed       |
-| **Payment Processing**    | Handle secure transactions for bookings                          | Payments processed via gateway; linked to bookings; receipts generated                          | 🔄 In Progress     |
-| **Review System**         | Allow users to leave feedback on booked properties              | Reviews tied to bookings; only verified users can post; moderation enabled                              | ✅ Completed       |
-| **Database Optimization** | Improve performance through indexing, caching, and query tuning  | Indexed fields; Redis caching active; slow queries logged and optimized                                | 🔄 In Progress     |
+- **Property Listings**  
+  Hosts can create, update, and delete listings. Guests can browse and filter properties. This forms the core of the platform’s functionality.
 
-## API security
-APIs act as the gateway between frontend and backend, and must be protected to prevent unauthorized access. This project uses..
--OpenAPI (Swagger): Interactive documentation and schema validation
--GraphQL SDL: Schema definition for secure query control
--RAML / API Blueprint: Optional formats for structured API design
--Postman Collections: For testing and sharing API workflows
+- **Booking System**  
+  Allows guests to book properties for specific dates. Ensures availability and prevents double bookings.
 
-##Security measures include:
--Token-based authentication
--Rate limiting and input validation
--Role-based access control
--HTTPS enforcement and CORS policies
+- **Review System**  
+  Guests can leave feedback after stays. Builds trust and helps improve listing quality.
 
-## CI/CD pipelines
-CI (Continuous Integration) is the practice of automatically testing and integrating code changes into a shared repository.
-CD (Continuous Delivery/Deployment) takes it a step further by automatically deploying those tested changes to a staging or production environment.
+- **Payment Integration**  
+  Handles secure transactions for bookings. Ensures financial accountability and user convenience.
 
-## Benefits
--Speed and efficiency
--Consistency across environments
--Confidence in every release
+---
 
-## Tools used
--GitHub Actions
--Jenkins
--CircleCI
--Travis CI
--Docker + Docker Compose
--Heroku Pipelines
+## 🔐 API Security
+
+Key Measures:
+- **Authentication**: Verifies user identity using tokens or sessions.
+- **Authorization**: Ensures users access only permitted resources (e.g., hosts can edit their own listings).
+- **Rate Limiting**: Prevents abuse by limiting request frequency.
+- **Input Validation**: Protects against injection attacks and malformed data.
+- **HTTPS Enforcement**: Encrypts data in transit for secure communication.
+
+Why It Matters:
+- Protects sensitive user data.
+- Secures financial transactions.
+- Prevents unauthorized access and system abuse.
+
+---
+
+## 🚀 CI/CD Pipeline
+
+### What is CI/CD?
+CI/CD stands for Continuous Integration and Continuous Deployment. It automates the process of testing, building, and deploying code changes.
+
+### Importance for This Project
+- Speeds up development cycles.
+- Reduces human error during deployment.
+- Ensures consistent environments across stages.
+
+### Tools to Use
+- **GitHub Actions**: Automates workflows directly from your GitHub repo.
+- **Docker**: Ensures consistent builds and deployments.
+- **Postman/Newman**: For automated API testing in the pipeline.
+
+---
+
+## 📎 
