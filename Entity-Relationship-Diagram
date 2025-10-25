@@ -1,13 +1,5 @@
 alx-airbnb-database/
-├── ERD/
-│   └── requirements.md
-├── normalization.md
-├── database-script-0x01/
-│   ├── schema.sql
-│   └── README.md
-├── database-script-0x02/
-│   ├── seed.sql
-│   └── README.md
+
 # 📊 Entity Relationship Diagram (ERD)
 
 ## Objective
