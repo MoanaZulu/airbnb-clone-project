@@ -193,7 +193,8 @@ property_id in the Property and Booking tables.
 booking_id in the Booking and P
 
 ## Objective
-Design a visual representation of the Airbnb database system using an ERD.
+<img width="1024" height="1024" alt="Copilot_20251027_155909" src="https://github.com/user-attachments/assets/531bbd22-cdcf-45b8-9682-45a59e68ea69" />
+
 
 ## Entities
 - User
@@ -212,7 +213,7 @@ Design a visual representation of the Airbnb database system using an ERD.
 <img width="1024" height="1024" alt="Copilot_20251027_121814" src="https://github.com/user-attachments/assets/e9b2ff00-1302-4fc9-bb7a-c592fd6b89a5" />
 
 
-# 🧠 Database Normalization
+##🧠 Database Normalization
 
 ## Objective
 Apply normalization principles to ensure the database is in Third Normal Form (3NF).
@@ -228,7 +229,7 @@ The final schema ensures:
 - High data integrity
 - Efficient querying
 
--- Airbnb Clone Schema Definition
+--- Airbnb Clone Schema Definition
 
 CREATE TABLE User (
     id INT PRIMARY KEY AUTO_INCREMENT,
