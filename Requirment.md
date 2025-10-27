@@ -1,4 +1,5 @@
 ## 📊 Entity Relationship Diagram (ERD)
+This document describes the entities and relationships for the Airbnb-style database.
 
 -User Management
 User Registration:
@@ -208,9 +209,8 @@ Design a visual representation of the Airbnb database system using an ERD.
 - A Payment is tied to a Booking.
 
 ## Tool
-*****Use [Draw.io](https://draw.io) or similar to create your ERD and upload the image or link here.*****
+<img width="1024" height="1024" alt="Copilot_20251027_121814" src="https://github.com/user-attachments/assets/e9b2ff00-1302-4fc9-bb7a-c592fd6b89a5" />
 
-## 
 
 # 🧠 Database Normalization
 
