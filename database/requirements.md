@@ -130,3 +130,64 @@ REVIEW
 
 
 <img width="1024" height="1024" alt="Copilot_20251027_121814" src="https://github.com/user-attachments/assets/4993c328-6347-4fa1-a03d-bef725b6e36c" />
+
+## 🧠 Database Normalization: Airbnb Clone
+
+This document outlines the normalization process applied to the Airbnb database design to ensure it adheres to **Third Normal Form (3NF)**.
+
+---
+
+## 🔹 First Normal Form (1NF)
+
+**Goal**: Eliminate repeating groups and ensure atomicity.
+
+**Steps Taken**:
+- All attributes contain atomic values (e.g., `email`, `price_per_night`, `start_date`)
+- No multi-valued fields or arrays
+- Each table has a defined primary key
+
+✅ Achieved: All tables meet 1NF requirements.
+
+---
+
+## 🔹 Second Normal Form (2NF)
+
+**Goal**: Remove partial dependencies (i.e., attributes depending on part of a composite key).
+
+**Steps Taken**:
+- All tables use single-column primary keys (e.g., `user_id`, `property_id`)
+- Non-key attributes fully depend on the entire primary key
+- Composite keys avoided where unnecessary
+
+✅ Achieved: No partial dependencies exist.
+
+---
+
+## 🔹 Third Normal Form (3NF)
+
+**Goal**: Remove transitive dependencies (i.e., non-key attributes depending on other non-key attributes).
+
+**Steps Taken**:
+- Attributes like `host_id` in `Property` reference `User(user_id)` — no duplication of host details
+- `Payment` references `Booking`, which already links to `User` and `Property` — no redundant user/property info in `Payment`
+- `Review` links to both `User` and `Property` without duplicating booking details
+
+✅ Achieved: All non-key attributes depend only on the primary key.
+
+---
+
+## 🧾 Outcome
+
+- ✅ Minimal redundancy
+- ✅ High data integrity
+- ✅ Efficient querying and scalability
+- ✅ Schema is normalized to **3NF**
+
+---
+
+## 📌 Notes
+
+- Foreign keys are used to maintain referential integrity
+- ENUMs used for controlled values (e.g., `role`, `status`, `payment_method`)
+- Indexes applied to frequently queried fields (e.g., `email`, `property_id`)
+
